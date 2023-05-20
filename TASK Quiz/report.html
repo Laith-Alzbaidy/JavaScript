@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./quaiz/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="pagetitle">Quiz Report</h1>
+      </header>
+
+      <section class="answer">
+        <div class="true">
+          <div class="icon">
+            <i
+              class="fa-sharp fa-solid fa-circle-check fa-5x"
+              style="color: #40ce4a"
+            ></i>
+          </div>
+          <h2 id="can"></h2>
+          <!-- can==>correct answer number -->
+        </div>
+        <div class="wrong">
+          <div class="icon">
+            <i
+              class="fa-sharp fa-solid fa-circle-xmark fa-5x"
+              style="color: #db0000"
+            ></i>
+          </div>
+          <h2 id="wan"></h2>
+          <!-- wan==>wrong answer number  -->
+        </div>
+      </section>
+      <div class="Questions">
+        <h1 style="text-align: center">Your Answer</h1>
+      </div>
+    </div>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+
+      // Retrieve the correctQuestion parameter as an array
+      const correctQuestionString = urlParams.get("correctQuestion");
+      const correctQuestion = JSON.parse(correctQuestionString);
+
+      // Retrieve the lastValue parameter as an array
+      const lastValueString = urlParams.get("lastValue");
+      const lastValue = JSON.parse(lastValueString);
+
+      // Use the parameters as needed
+      console.log(correctQuestion.length); // prints the number of correct questions
+      console.log(lastValue.length); // prints the number of last values
+
+      document.getElementById("can").innerHTML = correctQuestion.length;
+      document.getElementById("wan").innerHTML =
+        lastValue.length - correctQuestion.length;
+    </script>
+  </body>
+</html>

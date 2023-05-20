@@ -18,6 +18,7 @@ function shuffle() {
       ran = Math.floor(Math.random() * card.length)
     }
     arr.push(ran)
+    console.log(ran)
   }
 }
 

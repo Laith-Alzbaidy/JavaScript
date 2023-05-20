@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.ddddd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  gap: 5px;
+}
+button {
+  padding: 10px;
+}
+
+input {
+  width: 200px;
+  height: 40px;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="welcome"></h1>
+    <div class="containerTimer">
+      <div id="timer">
+        Entire Timer: <span id="min">10</span>:<span id="sec">60</span>
+      </div>
+      <div>Question Time:<span id="SQ">10</span></div>
+    </div>
+    <div class="container_card">
+      <div class="question">
+        <h1 id="question">Question <span id="numToCon"></span>/10</h1>
+        <p id="titel-question"></p>
+      </div>
+      <div class="answers">
+        <form>
+          <label for="1" id="l1">a</label><br />
+          <label for="2" id="l2">b</label><br />
+          <label for="3" id="l3">c</label><br />
+          <label for="4" id="l4">d</label>
+          <button>Next</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
